@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>PDF Envelope Generator</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/envelopes.css' %}">
+  </head>
+
+  <main>
+    <div class="page-header">
+      <a href="{% url 'base' %}" class="top-menu"></a>
+      <h1><strong><a href="">PDF Envelope Generator</a></strong></h1>
+    </div>
+
+    <div class="main-content">
+      <h4>Please fill in these forms:</h4>
+        <form method="GET" action="{% url 'output' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit-btn" class="save btn btn-default btn-lg btn-warning" value="Generate">
+        </form>
+      <br>
+    </div>
+
+  <footer>
+      <h5><a href="">Envelopes</a> © 2020 ELS | Powered by <a href="https://www.python.org/">Python 3.8.1</a> and <a href="https://en.wikipedia.org/wiki/Django_(web_framework)" class="external_link" id="link_to_wiki_page">Django 3.0.2</a></h5>
+  </footer>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<meta charset="UTF-16">
+<head>
+  <title>Generated Envelope</title>
+  <style type="text/css">
+    @font-face {
+        font-family: FreeSans;
+        src: url("https://db.onlinewebfonts.com/t/8d26605c5badd253d76def187c7f1f9b.ttf");
+        /* src: url("/usr/share/fonts/truetype/freefont/FreeSans.ttf"); */
+
+      }
+
+    body  {
+        font-family: FreeSans;
+    }
+
+    h2, h3 {
+        color: #000;
+        font-weight: normal;
+        font-size: 150%;
+        margin-top: -105px;
+        margin-bottom: -105px;
+    }
+
+    h4, h5 {
+        color: #000;
+        font-weight: normal;
+        font-size: 125%;
+        margin-top: -5em;
+        margin-bottom: -5em;
+    }
+
+    .envelope {
+        padding: 30px 30px 30px 30px;
+    }
+
+    .env-right {
+        padding-left: 425px;
+        padding-top: 70px;
+    }
+  </style>
+
+</head>
+  <body>
+    <div class="envelope">
+      <div class="env-left">
+        <h4>{{ viewsSenderTitle }}</h4>
+        <h4><strong><big>{{ viewsSenderName }}</big></strong></h4>
+        <h5><big>{{ viewsSenderAddress }}</big></h5>
+        <h4><big>{{ viewsSenderCity }}</big></h4>
+        <h5>{{ viewsSenderProvince }}</h5>
+        <h4><big>{{ viewsSenderZip}}</big></h4>
+        <h4>{{ viewsSenderCountry }}</h4>
+      </div>
+      <div class="env-right">
+        <h3>{{ viewsReceiverTitle }}</h3>
+        <h2><strong><big>{{ viewsReceiverName }}</big></strong></h2>
+        <h3><big>{{ viewsReceiverAddress }}</big></h3>
+        <h2><big>{{ viewsReceiverCity }}</big></h2>
+        <h3>{{ viewsReceiverProvince }}</h3>
+        <h2><big>{{ viewsReceiverZip}}</big></h2>
+        <h2>{{ viewsReceiverCountry }}</h2>
+      </div>
+    </div>
+  </body>
+</html>
